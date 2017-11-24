@@ -1,4 +1,9 @@
 ru:
+  layouts:
+    application:
+      new: 'Новая статья'
+      articles: 'Статьи'
+      contacts: 'Контакты'
   common:
     errors: 'При заполнение формы возникли ошибки'
     back: 'Назад'
@@ -7,7 +12,15 @@ ru:
       title: 'Новая статья'
     form:
       submit: '%{action} статью'
+      create: 'Создать'
+      edit: 'Изменить'
     index:
       title: 'Статьи'
     edit:
       title: 'Редактирование статьи'
+    show:
+      edit: 'Изменить'
+      delete: 'Удалить статью'
+    post:
+      edit: 'Изменить'
+      delete: 'Удалить статью'

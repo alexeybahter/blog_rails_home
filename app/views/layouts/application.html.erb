@@ -13,14 +13,20 @@
     <nav class="navbar navbar-light bg-light">
       <ul class="nav menu navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href=" <%= posts_path %> ">Статьи</a>
+          <a class="nav-link" href=" <%= posts_path %> "><%= I18n.t('.layouts.application.articles') %></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Контакты</a>
+          <a class="nav-link" href="#"><%= I18n.t('.layouts.application.contacts') %></a>
+        </li>
+        <li>
+          <%= link_to 'En', locale: :en %>
+        </li>
+        <li>
+          <%= link_to 'Рус', locale: :ru %>
         </li>
       </ul>
 
-      <%= link_to 'Новая статья', new_post_path, class: 'btn btn-outline-primary pull-xs-right' %>
+      <%= link_to I18n.t('.layouts.application.new'), new_post_path, class: 'btn btn-outline-primary pull-xs-right' %>
 
     </nav>
   </div>

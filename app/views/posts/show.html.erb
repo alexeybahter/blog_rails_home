@@ -4,9 +4,9 @@
     <small>
       <time> <%= @post.created_at.to_date.strftime("%b %B, %Y") %> </time>
       |
-      <%= link_to 'Изменить', edit_post_path(@post) %>
+      <%= link_to I18n.t('.posts.show.edit'), edit_post_path(@post) %>
       |
-      <%= link_to 'Удалить статью', post_path(@post), method: :delete, data: {confirm: 'Вы уверены?'} %>
+      <%= link_to I18n.t('.posts.show.delete'), post_path(@post), method: :delete, data: {confirm: 'Вы уверены?'} %>
 
     </small>
   </section>
