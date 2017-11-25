@@ -6479,3 +6479,218 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 90ms (Views: 85.2ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/ru/posts/31" for 127.0.0.1 at 2017-11-25 21:54:54 +0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"31"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_disqus.html.erb (0.3ms)
+  Rendered posts/show.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 407ms (Views: 367.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2017-11-25 21:55:16 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered collection of posts/_post.html.erb [1 times] (1.4ms)
+  Rendered posts/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 58ms (Views: 49.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/ru/posts/31" for 127.0.0.1 at 2017-11-25 21:55:18 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"31"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_disqus.html.erb (0.4ms)
+  Rendered posts/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 58ms (Views: 54.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ru/posts/new" for 127.0.0.1 at 2017-11-25 21:55:24 +0300
+Processing by PostsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (7.4ms)
+  Rendered posts/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 65ms (Views: 61.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pictures" for 127.0.0.1 at 2017-11-25 21:55:40 +0300
+Processing by PicturesController#create as */*
+  Parameters: {"Content-Type"=>"multipart/form-data", "picture"=>{"image"=>"blob:http://localhost:3000/ab5be2de-5044-4070-9912-c0c52ec6470d"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "pictures" ("image", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["image", "blob:http://localhost:3000/ab5be2de-5044-4070-9912-c0c52ec6470d"], ["created_at", "2017-11-25 18:55:40.458772"], ["updated_at", "2017-11-25 18:55:40.458772"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/ru/posts" for 127.0.0.1 at 2017-11-25 21:55:54 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0PPOyuUTgMFC48t9e/dwHAP0na4sCUxObDeGhYSM5JMAOHMKVyk6XVs5jzOSunP4BkCc+u6Nlvhc97KT0xQDBg==", "post"=>{"title"=>"121212", "summary"=>"21312312321321321", "body"=>"<div>123123123123123123<a href=\"blob:http://localhost:3000/ab5be2de-5044-4070-9912-c0c52ec6470d\" data-trix-attachment=\"{&quot;contentType&quot;:&quot;image/png&quot;,&quot;filename&quot;:&quot;supportmale.png&quot;,&quot;filesize&quot;:6243,&quot;height&quot;:256,&quot;href&quot;:&quot;blob:http://localhost:3000/ab5be2de-5044-4070-9912-c0c52ec6470d&quot;,&quot;picture_id&quot;:23,&quot;url&quot;:&quot;blob:http://localhost:3000/ab5be2de-5044-4070-9912-c0c52ec6470d&quot;,&quot;width&quot;:256}\" data-trix-content-type=\"image/png\"><figure class=\"attachment attachment--preview attachment--png\"><img src=\"blob:http://localhost:3000/ab5be2de-5044-4070-9912-c0c52ec6470d\" width=\"256\" height=\"256\"><figcaption class=\"attachment__caption\"><span class=\"attachment__name\">supportmale.png</span> <span class=\"attachment__size\">6.1 KB</span></figcaption></figure></a></div>"}, "commit"=>"Создать статью", "locale"=>"ru"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "summary", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "121212"], ["summary", "21312312321321321"], ["body", "<div>123123123123123123<a href=\"blob:http://localhost:3000/ab5be2de-5044-4070-9912-c0c52ec6470d\" data-trix-attachment=\"{&quot;contentType&quot;:&quot;image/png&quot;,&quot;filename&quot;:&quot;supportmale.png&quot;,&quot;filesize&quot;:6243,&quot;height&quot;:256,&quot;href&quot;:&quot;blob:http://localhost:3000/ab5be2de-5044-4070-9912-c0c52ec6470d&quot;,&quot;picture_id&quot;:23,&quot;url&quot;:&quot;blob:http://localhost:3000/ab5be2de-5044-4070-9912-c0c52ec6470d&quot;,&quot;width&quot;:256}\" data-trix-content-type=\"image/png\"><figure class=\"attachment attachment--preview attachment--png\"><img src=\"blob:http://localhost:3000/ab5be2de-5044-4070-9912-c0c52ec6470d\" width=\"256\" height=\"256\"><figcaption class=\"attachment__caption\"><span class=\"attachment__name\">supportmale.png</span> <span class=\"attachment__size\">6.1 KB</span></figcaption></figure></a></div>"], ["created_at", "2017-11-25 18:55:54.798638"], ["updated_at", "2017-11-25 18:55:54.798638"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/posts/32
+Completed 302 Found in 8ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/ru/posts/32" for 127.0.0.1 at 2017-11-25 21:55:54 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"32"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_disqus.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 58ms (Views: 53.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2017-11-25 21:56:06 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered collection of posts/_post.html.erb [2 times] (2.0ms)
+  Rendered posts/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 67ms (Views: 64.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ru/posts/32" for 127.0.0.1 at 2017-11-25 21:56:09 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"32"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_disqus.html.erb (0.9ms)
+  Rendered posts/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 72ms (Views: 67.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/ru/posts/32" for 127.0.0.1 at 2017-11-25 21:59:36 +0300
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hNCkB908UfB5zBVQKPjQThs8umtVuKMZTSWaM41RNCdLzUVe3+mo84DogrBV3n9+q4FkPpZKk2hUNn1URlSKag==", "locale"=>"ru", "id"=>"32"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 32]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/posts
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2017-11-25 21:59:36 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered collection of posts/_post.html.erb [1 times] (1.7ms)
+  Rendered posts/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ru/posts/new" for 127.0.0.1 at 2017-11-25 21:59:39 +0300
+Processing by PostsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.2ms)
+  Rendered posts/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 54ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pictures" for 127.0.0.1 at 2017-11-25 21:59:52 +0300
+Processing by PicturesController#create as */*
+  Parameters: {"Content-Type"=>"multipart/form-data", "picture"=>{"image"=>"blob:http://localhost:3000/d646c33a-2b50-409d-95d5-a938d84c6cf3"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "pictures" ("image", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["image", "blob:http://localhost:3000/d646c33a-2b50-409d-95d5-a938d84c6cf3"], ["created_at", "2017-11-25 18:59:52.561380"], ["updated_at", "2017-11-25 18:59:52.561380"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/pictures" for 127.0.0.1 at 2017-11-25 21:59:55 +0300
+Processing by PicturesController#create as */*
+  Parameters: {"Content-Type"=>"multipart/form-data", "picture"=>{"image"=>"blob:http://localhost:3000/61e059e8-18c2-4f1e-bf60-e7833b84a129"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "pictures" ("image", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["image", "blob:http://localhost:3000/61e059e8-18c2-4f1e-bf60-e7833b84a129"], ["created_at", "2017-11-25 18:59:55.640777"], ["updated_at", "2017-11-25 18:59:55.640777"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/ru/posts" for 127.0.0.1 at 2017-11-25 22:00:00 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lpacvHy4CPhLG7Pdx0AfK2VnGgWHmfX0O8IKwGylvYRGXSF8zoKyZFLB95MuDRzPYNMbUUUdL0ILAj7WOz1aEQ==", "post"=>{"title"=>"qwerty", "summary"=>"asdfghjkihugyguguih", "body"=>"<div>ghjkjkopkokhyugygyg<a href=\"blob:http://localhost:3000/61e059e8-18c2-4f1e-bf60-e7833b84a129\" data-trix-attachment=\"{&quot;contentType&quot;:&quot;image/jpeg&quot;,&quot;filename&quot;:&quot;foto.jpg&quot;,&quot;filesize&quot;:487901,&quot;height&quot;:1298,&quot;href&quot;:&quot;blob:http://localhost:3000/61e059e8-18c2-4f1e-bf60-e7833b84a129&quot;,&quot;picture_id&quot;:25,&quot;url&quot;:&quot;blob:http://localhost:3000/61e059e8-18c2-4f1e-bf60-e7833b84a129&quot;,&quot;width&quot;:1944}\" data-trix-content-type=\"image/jpeg\"><figure class=\"attachment attachment--preview attachment--jpg\"><img src=\"blob:http://localhost:3000/61e059e8-18c2-4f1e-bf60-e7833b84a129\" width=\"1944\" height=\"1298\"><figcaption class=\"attachment__caption\"><span class=\"attachment__name\">foto.jpg</span> <span class=\"attachment__size\">476.47 KB</span></figcaption></figure></a><a href=\"blob:http://localhost:3000/d646c33a-2b50-409d-95d5-a938d84c6cf3\" data-trix-attachment=\"{&quot;contentType&quot;:&quot;image/png&quot;,&quot;filename&quot;:&quot;supportmale.png&quot;,&quot;filesize&quot;:6243,&quot;height&quot;:256,&quot;href&quot;:&quot;blob:http://localhost:3000/d646c33a-2b50-409d-95d5-a938d84c6cf3&quot;,&quot;picture_id&quot;:24,&quot;url&quot;:&quot;blob:http://localhost:3000/d646c33a-2b50-409d-95d5-a938d84c6cf3&quot;,&quot;width&quot;:256}\" data-trix-content-type=\"image/png\"><figure class=\"attachment attachment--preview attachment--png\"><img src=\"blob:http://localhost:3000/d646c33a-2b50-409d-95d5-a938d84c6cf3\" width=\"256\" height=\"256\"><figcaption class=\"attachment__caption\"><span class=\"attachment__name\">supportmale.png</span> <span class=\"attachment__size\">6.1 KB</span></figcaption></figure></a></div>"}, "commit"=>"Создать статью", "locale"=>"ru"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "summary", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "qwerty"], ["summary", "asdfghjkihugyguguih"], ["body", "<div>ghjkjkopkokhyugygyg<a href=\"blob:http://localhost:3000/61e059e8-18c2-4f1e-bf60-e7833b84a129\" data-trix-attachment=\"{&quot;contentType&quot;:&quot;image/jpeg&quot;,&quot;filename&quot;:&quot;foto.jpg&quot;,&quot;filesize&quot;:487901,&quot;height&quot;:1298,&quot;href&quot;:&quot;blob:http://localhost:3000/61e059e8-18c2-4f1e-bf60-e7833b84a129&quot;,&quot;picture_id&quot;:25,&quot;url&quot;:&quot;blob:http://localhost:3000/61e059e8-18c2-4f1e-bf60-e7833b84a129&quot;,&quot;width&quot;:1944}\" data-trix-content-type=\"image/jpeg\"><figure class=\"attachment attachment--preview attachment--jpg\"><img src=\"blob:http://localhost:3000/61e059e8-18c2-4f1e-bf60-e7833b84a129\" width=\"1944\" height=\"1298\"><figcaption class=\"attachment__caption\"><span class=\"attachment__name\">foto.jpg</span> <span class=\"attachment__size\">476.47 KB</span></figcaption></figure></a><a href=\"blob:http://localhost:3000/d646c33a-2b50-409d-95d5-a938d84c6cf3\" data-trix-attachment=\"{&quot;contentType&quot;:&quot;image/png&quot;,&quot;filename&quot;:&quot;supportmale.png&quot;,&quot;filesize&quot;:6243,&quot;height&quot;:256,&quot;href&quot;:&quot;blob:http://localhost:3000/d646c33a-2b50-409d-95d5-a938d84c6cf3&quot;,&quot;picture_id&quot;:24,&quot;url&quot;:&quot;blob:http://localhost:3000/d646c33a-2b50-409d-95d5-a938d84c6cf3&quot;,&quot;width&quot;:256}\" data-trix-content-type=\"image/png\"><figure class=\"attachment attachment--preview attachment--png\"><img src=\"blob:http://localhost:3000/d646c33a-2b50-409d-95d5-a938d84c6cf3\" width=\"256\" height=\"256\"><figcaption class=\"attachment__caption\"><span class=\"attachment__name\">supportmale.png</span> <span class=\"attachment__size\">6.1 KB</span></figcaption></figure></a></div>"], ["created_at", "2017-11-25 19:00:00.987101"], ["updated_at", "2017-11-25 19:00:00.987101"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/posts/33
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/ru/posts/33" for 127.0.0.1 at 2017-11-25 22:00:00 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"33"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_disqus.html.erb (0.3ms)
+  Rendered posts/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 48ms (Views: 44.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2017-11-25 22:00:28 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered collection of posts/_post.html.erb [2 times] (2.4ms)
+  Rendered posts/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ru/posts/31" for 127.0.0.1 at 2017-11-25 22:06:20 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"31"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_disqus.html.erb (0.3ms)
+  Rendered posts/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 45ms (Views: 40.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/ru/posts/31" for 127.0.0.1 at 2017-11-25 22:07:06 +0300
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"I2j5k+kni0ctmbuQq5vzB+VidaqEoYVTKDHNrv/RKt/sdRjK6/JyRNS9LHDWvVw3Vd+r/0dTtSIxIirJNNSUkg==", "locale"=>"ru", "id"=>"31"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 31]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/posts
+Completed 302 Found in 6ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2017-11-25 22:07:06 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered collection of posts/_post.html.erb [1 times] (1.0ms)
+  Rendered posts/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 51ms (Views: 49.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ru/posts/33" for 127.0.0.1 at 2017-11-25 22:07:09 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"33"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_disqus.html.erb (0.5ms)
+  Rendered posts/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 49ms (Views: 44.9ms | ActiveRecord: 0.4ms)
+
+
