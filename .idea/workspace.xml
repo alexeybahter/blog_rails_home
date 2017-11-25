@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77efa5ab-2a91-497c-a22f-33783acac1dc" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/post/image/34/large_supportmale.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/post/image/34/supportmale.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/post/image/34/thumb_supportmale.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/bootstrap_pagination_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/index.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/pids/server.pid" afterPath="$PROJECT_DIR$/tmp/pids/server.pid" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -446,12 +451,12 @@
       <workItem from="1511533796521" duration="1980000" />
       <workItem from="1511537180449" duration="9601000" />
       <workItem from="1511606436906" duration="11449000" />
-      <workItem from="1511634677899" duration="1421000" />
+      <workItem from="1511634677899" duration="1533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27584000" />
+    <option name="totallyTimeSpent" value="27696000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
