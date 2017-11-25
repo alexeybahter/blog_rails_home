@@ -3,5 +3,6 @@ Rails.application.routes.draw do
     # все маршруты
     root "posts#index"
     resources :posts
+    resources :pictures, only: [ :create, :destroy ]
   end
 end

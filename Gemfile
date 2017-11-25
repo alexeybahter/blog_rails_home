@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-
+gem 'trix'
+gem 'mini_magick'
+gem 'carrierwave', '~> 1.0'
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'pg'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

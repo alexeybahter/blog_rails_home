@@ -1,0 +1,67 @@
+I"2(function() {
+  var deleteFile, sendFile;
+
+  console.log("sdsdsdsdsd");
+
+  document.addEventListener('trix-attachment-add', function(event) {
+    var attachment;
+    attachment = event.attachment;
+    console.log("attachment123", attachment);
+    if (attachment.file) {
+      console.log("file true");
+      return sendFile(attachment);
+    }
+  });
+
+  document.addEventListener('trix-attachment-remove', function(event) {
+    var attachment;
+    attachment = event.attachment;
+    return deleteFile(attachment);
+  });
+
+  sendFile = function(attachment) {
+    var file, fileObjectURL, form, xhr;
+    console.log("attachment-sendFile", attachment.attachment.fileObjectURL);
+    file = attachment.attachment.file;
+    fileObjectURL = attachment.attachment.fileObjectURL;
+    form = new FormData;
+    console.log("sendFile", file);
+    console.log("FormData1", form);
+    form.append('Content-Type', file.type);
+    form.append('picture[image]', fileObjectURL);
+    console.log("FormData2", form);
+    xhr = new XMLHttpRequest;
+    xhr.open('POST', '/pictures', true);
+    xhr.upload.onprogress = function(event) {
+      var progress;
+      progress = void 0;
+      progress = event.loaded / event.total * 100;
+      return attachment.setUploadProgress(progress);
+    };
+    xhr.onload = function() {
+      var response;
+      response = JSON.parse(this.responseText);
+      console.log("response", response);
+      return attachment.setAttributes({
+        url: response.url,
+        picture_id: response.picture_id,
+        href: response.url
+      });
+    };
+    return xhr.send(form);
+  };
+
+  deleteFile = function(n) {
+    return $.ajax({
+      type: 'DELETE',
+      url: '/pictures/' + n.attachment.attributes.values.picture_id,
+      cache: false,
+      contentType: false,
+      processData: false
+    });
+  };
+
+  return;
+
+}).call(this);
+:ET
