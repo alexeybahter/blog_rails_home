@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+
+
+gem 'will_paginate', '~> 3.1.0'
 gem 'trix'
 gem 'mini_magick'
 gem 'carrierwave', '~> 1.0'

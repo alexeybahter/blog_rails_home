@@ -1,3 +1,5 @@
 <h3><%= I18n.t('.posts.index.title') %></h3>
 
 <%= render @posts %>
+
+<%= will_paginate @posts, renderer: BootstrapPaginationHelper::LinkRenderer %>
