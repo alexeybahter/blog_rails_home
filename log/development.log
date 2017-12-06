@@ -7220,3 +7220,1852 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 50ms (Views: 46.3ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/" for ::1 at 2017-12-02 21:26:47 +0300
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+pg (0.21.0) lib/pg.rb:56:in `initialize'
+pg (0.21.0) lib/pg.rb:56:in `new'
+pg (0.21.0) lib/pg.rb:56:in `connect'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:695:in `connect'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:220:in `initialize'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for ::1 at 2017-12-02 21:27:44 +0300
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (7.5ms)
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (50.1ms)
+Completed 200 OK in 352ms (Views: 327.9ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/ru?page=2" for ::1 at 2017-12-02 21:28:52 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2", "locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  Rendered collection of posts/_post.html.erb [5 times] (2.9ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 52ms (Views: 47.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ru?page=3" for ::1 at 2017-12-02 21:28:53 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"3", "locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 10]]
+  Rendered collection of posts/_post.html.erb [1 times] (1.6ms)
+  Rendered posts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 55ms (Views: 52.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ru?page=1" for ::1 at 2017-12-02 21:28:54 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"1", "locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (4.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 65ms (Views: 60.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ru?page=2" for ::1 at 2017-12-02 21:28:57 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2", "locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 59ms (Views: 55.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ru?page=3" for ::1 at 2017-12-02 21:28:58 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"3", "locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 10]]
+  Rendered collection of posts/_post.html.erb [1 times] (1.4ms)
+  Rendered posts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 57ms (Views: 52.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ru?page=3" for ::1 at 2017-12-02 21:29:01 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"3", "locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 10]]
+  Rendered collection of posts/_post.html.erb [1 times] (1.3ms)
+  Rendered posts/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 69ms (Views: 65.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/en" for ::1 at 2017-12-02 21:29:02 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 65ms (Views: 60.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ru" for ::1 at 2017-12-02 21:29:03 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.9ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 79ms (Views: 75.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/en" for ::1 at 2017-12-02 21:29:05 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.5ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 58ms (Views: 54.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 22:45:10 +0300
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+pg (0.21.0) lib/pg.rb:56:in `initialize'
+pg (0.21.0) lib/pg.rb:56:in `new'
+pg (0.21.0) lib/pg.rb:56:in `connect'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:695:in `connect'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:220:in `initialize'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-12-06 14:02:50 +0300
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (12.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (7.3ms)
+  [1m[35m (20.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (96.9ms)
+Completed 200 OK in 380ms (Views: 325.6ms | ActiveRecord: 40.5ms)
+
+
+Started GET "/ru/posts/34" for 127.0.0.1 at 2017-12-06 14:02:58 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"34"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_disqus.html.erb (0.4ms)
+  Rendered posts/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 75ms (Views: 65.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2017-12-06 14:03:06 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (4.7ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 62ms (Views: 58.4ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/ru/posts/33" for 127.0.0.1 at 2017-12-06 14:03:35 +0300
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3g9FAaTikuXOkndXlBiVB+jXWYN69UcGKHJfjc1hLGsREqRYpjdr5je24LfpPjo3WGqH1rkHd3cxYbjqBmSSJg==", "locale"=>"ru", "id"=>"33"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.0ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 33]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/posts
+Completed 302 Found in 20ms (ActiveRecord: 13.8ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2017-12-06 14:03:35 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (5.4ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 80ms (Views: 77.0ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/ru/posts/34" for 127.0.0.1 at 2017-12-06 14:03:39 +0300
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Q37t4Myebod6mC+/pUiE2eM6lDop9LxNxT9062XgH8SMYwy5zkuXhIO8uF/YbivpU4dKb+oGjDzcLJOMruWhiQ==", "locale"=>"ru", "id"=>"34"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 34]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/posts
+Completed 302 Found in 11ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2017-12-06 14:03:39 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 73ms (Views: 70.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ru?page=2" for 127.0.0.1 at 2017-12-06 14:03:42 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2", "locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  Rendered collection of posts/_post.html.erb [4 times] (2.7ms)
+  Rendered posts/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 51ms (Views: 48.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ru?page=1" for 127.0.0.1 at 2017-12-06 14:03:44 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"1", "locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ru?page=1" for 127.0.0.1 at 2017-12-06 14:11:46 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"1", "locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (2.6ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 56ms (Views: 52.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2017-12-06 14:11:55 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 61ms (Views: 57.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-12-06 14:11:57 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.9ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 57ms (Views: 52.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-12-06 14:12:19 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (9.1ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.7ms)
+
+
+  
+SyntaxError (/Users/alexey/RubymineProjects/blog_rails_home/app/views/layouts/application.html.erb:22: syntax error, unexpected ','
+r.append=( select_tag locale:, options_for_select([ "En", "R
+                              ^):
+  
+app/views/layouts/application.html.erb:22: syntax error, unexpected ','
+Started GET "/en" for 127.0.0.1 at 2017-12-06 14:12:51 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (2.5ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 51ms (Views: 46.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-12-06 14:13:46 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/Users/alexey/RubymineProjects/blog_rails_home/app/views/layouts/application.html.erb:22: syntax error, unexpected tLABEL
+r.append=( select_tag (locale: :en, locale: :ru), options_fo
+                              ^
+/Users/alexey/RubymineProjects/blog_rails_home/app/views/layouts/application.html.erb:22: syntax error, unexpected ')', expecting keyword_end
+select([ "En", "Ru" ], "Ru") );@output_buffer.safe_append='
+                              ^):
+  
+app/views/layouts/application.html.erb:22: syntax error, unexpected tLABEL
+app/views/layouts/application.html.erb:22: syntax error, unexpected ')', expecting keyword_end
+Started GET "/en" for 127.0.0.1 at 2017-12-06 14:17:05 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (2.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 53ms (Views: 49.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-12-06 14:17:11 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.3ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 58ms (Views: 54.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2017-12-06 14:17:12 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (4.4ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 62ms (Views: 58.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-12-06 14:17:13 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (4.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 65ms (Views: 60.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2017-12-06 14:17:13 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (5.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 67ms (Views: 63.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2017-12-06 14:21:03 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (2.9ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 63ms (Views: 59.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2017-12-06 14:21:27 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (5.6ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 291ms (Views: 272.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2017-12-06 14:21:46 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (6.8ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (43.7ms)
+Completed 200 OK in 289ms (Views: 269.5ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2017-12-06 14:23:37 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (2.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 57ms (Views: 49.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2017-12-06 14:23:39 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 71ms (Views: 68.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-12-06 14:23:42 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 67ms (Views: 62.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2017-12-06 14:23:43 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (5.9ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 88ms (Views: 84.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-12-06 14:23:44 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (4.9ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 91ms (Views: 86.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2017-12-06 14:23:45 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.4ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 59ms (Views: 54.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/ru?page=2" for 127.0.0.1 at 2017-12-06 14:24:11 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2", "locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  Rendered collection of posts/_post.html.erb [4 times] (2.2ms)
+  Rendered posts/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ru?page=1" for 127.0.0.1 at 2017-12-06 14:24:12 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"1", "locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 54ms (Views: 50.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ru?page=1" for 127.0.0.1 at 2017-12-06 14:31:41 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"1", "locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (8.9ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-12-06 14:31:43 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (4.8ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 62ms (Views: 58.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2017-12-06 14:31:44 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 61ms (Views: 56.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-12-06 14:31:44 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (5.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 69ms (Views: 64.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2017-12-06 14:31:49 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.9ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 60ms (Views: 56.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2017-12-06 14:32:19 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (2.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 50ms (Views: 46.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-12-06 14:32:21 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (4.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 68ms (Views: 63.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2017-12-06 14:32:23 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 55ms (Views: 51.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-12-06 14:32:23 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (2.7ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 61ms (Views: 56.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-12-06 14:38:42 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 59ms (Views: 55.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2017-12-06 14:38:44 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (4.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 60ms (Views: 57.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-12-06 14:38:45 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (2.6ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 57ms (Views: 53.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2017-12-06 14:38:45 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (2.9ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 61ms (Views: 57.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-12-06 14:38:46 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (8.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 63ms (Views: 59.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2017-12-06 14:38:47 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.9ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 75ms (Views: 71.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2017-12-06 14:52:00 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 69ms (Views: 59.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/ru/posts/new" for 127.0.0.1 at 2017-12-06 14:52:05 +0300
+Processing by PostsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (8.9ms)
+  Rendered posts/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 63ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ru/posts" for 127.0.0.1 at 2017-12-06 14:52:07 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"StgcOi3mtaBN0u88vfzuVASeOqzQiqrAYdyFn17gz+iaE6H6n9wPPFQIq3JUse2wASo7+BIOcHZRHLGJCXgofQ==", "post"=>{"title"=>"", "summary"=>"", "body"=>""}, "commit"=>"Создать статью", "locale"=>"ru"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (3.2ms)
+  Rendered posts/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 50ms (Views: 45.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ru/posts/new" for 127.0.0.1 at 2017-12-06 14:52:49 +0300
+Processing by PostsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.3ms)
+  Rendered posts/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 51ms (Views: 48.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2017-12-06 14:52:50 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (4.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 59ms (Views: 55.3ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6166590493836834180)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCategories (20171206115408)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (43.3ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171206115408"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6166590493836834180)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ru/category/new" for 127.0.0.1 at 2017-12-06 15:16:42 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant CategoryController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/ru/categories/new" for 127.0.0.1 at 2017-12-06 15:16:50 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ru/categories/new"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/ru/categories/new" for 127.0.0.1 at 2017-12-06 15:17:05 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.8ms)
+  Rendered categories/new.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @post.errors.any? %>
+    2:   <div class="alert alert-danger">
+    3:     <h5><%= t('common.errors') %></h5>
+    4:     <ul>
+  
+app/views/categories/_form.html.erb:1:in `_app_views_categories__form_html_erb__2997617015092722600_70159185627080'
+app/views/categories/new.html.erb:3:in `_app_views_categories_new_html_erb__2870106151463172201_70159185730780'
+Started GET "/ru/categories/new" for 127.0.0.1 at 2017-12-06 15:17:53 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.6ms)
+  Rendered categories/new.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @post.errors.any? %>
+    2:   <div class="alert alert-danger">
+    3:     <h5><%= t('common.errors') %></h5>
+    4:     <ul>
+  
+app/views/categories/_form.html.erb:1:in `_app_views_categories__form_html_erb__2997617015092722600_70159185615420'
+app/views/categories/new.html.erb:3:in `_app_views_categories_new_html_erb__2870106151463172201_70159185150820'
+Started GET "/ru/categories/new" for 127.0.0.1 at 2017-12-06 15:45:45 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.1ms)
+  Rendered categories/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 3250ms (Views: 3243.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en/categories/new" for 127.0.0.1 at 2017-12-06 15:45:51 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.0ms)
+  Rendered categories/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 100ms (Views: 96.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ru/categories/new" for 127.0.0.1 at 2017-12-06 15:45:56 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (4.2ms)
+  Rendered categories/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 70ms (Views: 67.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en/categories/new" for 127.0.0.1 at 2017-12-06 15:45:57 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (1.8ms)
+  Rendered categories/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 54ms (Views: 50.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ru/categories/new" for 127.0.0.1 at 2017-12-06 15:45:58 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.1ms)
+  Rendered categories/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ru/categories/new" for 127.0.0.1 at 2017-12-06 15:48:22 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.1ms)
+  Rendered categories/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 56ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ru/categories/new" for 127.0.0.1 at 2017-12-06 15:48:32 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (1.5ms)
+  Rendered categories/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ru/categories/new" for 127.0.0.1 at 2017-12-06 15:48:34 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.3ms)
+  Rendered categories/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 55ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ru/categories/new" for 127.0.0.1 at 2017-12-06 15:48:37 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (1.8ms)
+  Rendered categories/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 52ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en/categories/new" for 127.0.0.1 at 2017-12-06 15:48:38 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.1ms)
+  Rendered categories/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 63ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ru/categories/new" for 127.0.0.1 at 2017-12-06 15:48:41 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.0ms)
+  Rendered categories/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 51ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en/categories/new" for 127.0.0.1 at 2017-12-06 15:48:42 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.3ms)
+  Rendered categories/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 57ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ru/categories/new" for 127.0.0.1 at 2017-12-06 15:48:43 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.1ms)
+  Rendered categories/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 52ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ru/categories/new" for 127.0.0.1 at 2017-12-06 15:51:27 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (1.9ms)
+  Rendered categories/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 56ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ru/categories/new" for 127.0.0.1 at 2017-12-06 15:51:29 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (1.3ms)
+  Rendered categories/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en/categories/new" for 127.0.0.1 at 2017-12-06 15:51:31 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.5ms)
+  Rendered categories/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ru/categories/new" for 127.0.0.1 at 2017-12-06 15:51:32 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.1ms)
+  Rendered categories/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en/categories/new" for 127.0.0.1 at 2017-12-06 15:51:33 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.5ms)
+  Rendered categories/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 59ms (Views: 55.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ru/categories/new" for 127.0.0.1 at 2017-12-06 15:51:34 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.0ms)
+  Rendered categories/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 52ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en/categories/new" for 127.0.0.1 at 2017-12-06 15:51:35 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (1.8ms)
+  Rendered categories/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 53ms (Views: 49.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ru/categories/new" for 127.0.0.1 at 2017-12-06 15:51:35 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.5ms)
+  Rendered categories/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 53ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en/categories/new" for 127.0.0.1 at 2017-12-06 15:51:36 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.1ms)
+  Rendered categories/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 56ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ru/categories/new" for 127.0.0.1 at 2017-12-06 15:51:37 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.0ms)
+  Rendered categories/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 54ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ru/categories/show" for 127.0.0.1 at 2017-12-06 15:51:51 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"show"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Category with 'id'=):
+  
+app/controllers/categories_controller.rb:46:in `set_category'
+Started GET "/ru/categories/show" for 127.0.0.1 at 2017-12-06 15:52:06 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"show"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Category with 'id'=):
+  
+app/controllers/categories_controller.rb:46:in `set_category'
+Started GET "/ru/categories/show" for 127.0.0.1 at 2017-12-06 15:52:08 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"show"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Category with 'id'=show):
+  
+app/controllers/categories_controller.rb:46:in `set_category'
+Started GET "/ru" for 127.0.0.1 at 2017-12-06 15:53:27 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.6ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 66ms (Views: 54.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/ru/posts/new" for 127.0.0.1 at 2017-12-06 15:53:30 +0300
+Processing by PostsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (3.1ms)
+  Rendered posts/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 54ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en/posts/new" for 127.0.0.1 at 2017-12-06 15:55:06 +0300
+Processing by PostsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.0ms)
+  Rendered posts/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 56ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ru/posts/new" for 127.0.0.1 at 2017-12-06 15:55:08 +0300
+Processing by PostsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.4ms)
+  Rendered posts/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 52ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en/posts/new" for 127.0.0.1 at 2017-12-06 15:55:09 +0300
+Processing by PostsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.1ms)
+  Rendered posts/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ru/posts/new" for 127.0.0.1 at 2017-12-06 15:55:09 +0300
+Processing by PostsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.8ms)
+  Rendered posts/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 58ms (Views: 54.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en/posts/new" for 127.0.0.1 at 2017-12-06 15:55:24 +0300
+Processing by PostsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.6ms)
+  Rendered posts/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 60ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en/categories/new" for 127.0.0.1 at 2017-12-06 15:59:59 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (1.9ms)
+  Rendered categories/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 60ms (Views: 49.5ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/en/categories" for 127.0.0.1 at 2017-12-06 16:00:07 +0300
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YQp6wkcNwFXSkY7Y3zNhf8SUWDQIKLMsHz1Sal23CoyuF5ubRdg5Viu1GTiiFc5PdCmGYcvag10GLrUNlrK0wQ==", "category"=>{"name"=>"Ruby"}, "commit"=>"Create category", "locale"=>"en"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ruby"], ["created_at", "2017-12-06 13:00:07.866754"], ["updated_at", "2017-12-06 13:00:07.866754"]]
+  [1m[35m (11.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 12.4ms)
+
+
+  
+NoMethodError (undefined method `categories_path?' for #<CategoriesController:0x00007f9e6aa20700>
+Did you mean?  categories_path
+               category_path):
+  
+app/controllers/categories_controller.rb:19:in `create'
+Started POST "/en/categories" for 127.0.0.1 at 2017-12-06 16:01:03 +0300
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YQp6wkcNwFXSkY7Y3zNhf8SUWDQIKLMsHz1Sal23CoyuF5ubRdg5Viu1GTiiFc5PdCmGYcvag10GLrUNlrK0wQ==", "category"=>{"name"=>"Ruby"}, "commit"=>"Create category", "locale"=>"en"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ruby"], ["created_at", "2017-12-06 13:01:03.438925"], ["updated_at", "2017-12-06 13:01:03.438925"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/en/categories?success=%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F+%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE+%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B0
+Completed 302 Found in 11ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/en/categories?success=%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F+%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE+%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B0" for 127.0.0.1 at 2017-12-06 16:01:03 +0300
+Processing by CategoriesController#index as HTML
+  Parameters: {"success"=>"Категория успешно создана", "locale"=>"en"}
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <h3><%= I18n.t('.posts.index.title') %></h3>
+    2: 
+    3: <%= render @posts %>
+    4: 
+    5: <%= will_paginate @posts, renderer: BootstrapPaginationHelper::LinkRenderer %>
+  
+app/views/categories/index.html.erb:3:in `_app_views_categories_index_html_erb__3489196587366388394_70159185944400'
+Started GET "/en/categories?success=%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F+%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE+%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B0" for 127.0.0.1 at 2017-12-06 16:01:53 +0300
+Processing by CategoriesController#index as HTML
+  Parameters: {"success"=>"Категория успешно создана", "locale"=>"en"}
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Missing partial categories/_category with {:locale=>[:en, :ru], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/alexey/RubymineProjects/blog_rails_home/app/views"
+):
+    1: <h3><%= I18n.t('.posts.index.title') %></h3>
+    2: 
+    3: <%= render @categories %>
+    4: 
+    5: <%= will_paginate @categories, renderer: BootstrapPaginationHelper::LinkRenderer %>
+  
+app/views/categories/index.html.erb:3:in `_app_views_categories_index_html_erb__3489196587366388394_70159162915460'
+Started GET "/en/categories?success=%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F+%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE+%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B0" for 127.0.0.1 at 2017-12-06 16:02:25 +0300
+Processing by CategoriesController#index as HTML
+  Parameters: {"success"=>"Категория успешно создана", "locale"=>"en"}
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Missing partial categories/_category with {:locale=>[:en, :ru], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/alexey/RubymineProjects/blog_rails_home/app/views"
+):
+    1: <h3><%= I18n.t('.categories.index.title') %></h3>
+    2: 
+    3: <%= render @categories %>
+    4: 
+    5: <%= will_paginate @categories, renderer: BootstrapPaginationHelper::LinkRenderer %>
+  
+app/views/categories/index.html.erb:3:in `_app_views_categories_index_html_erb__3489196587366388394_70159227447540'
+Started GET "/ru/categories/new" for 127.0.0.1 at 2017-12-06 16:02:52 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.5ms)
+  Rendered categories/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 71ms (Views: 68.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ru/categories" for 127.0.0.1 at 2017-12-06 16:02:58 +0300
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AMT+N1tvrRPPuBbrzXEMduH8GmvkzY5YDzi3nX2AeQlT7nBxBxGVKa3tA9b2yo0zcIZrUHTwkHeI4Cl3LU869g==", "category"=>{"name"=>"Ruby"}, "commit"=>"Создать категорию", "locale"=>"ru"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ruby"], ["created_at", "2017-12-06 13:02:58.355165"], ["updated_at", "2017-12-06 13:02:58.355165"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/categories?success=%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F+%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE+%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B0
+Completed 302 Found in 9ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/ru/categories?success=%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F+%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE+%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B0" for 127.0.0.1 at 2017-12-06 16:02:58 +0300
+Processing by CategoriesController#index as HTML
+  Parameters: {"success"=>"Категория успешно создана", "locale"=>"ru"}
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Missing partial categories/_category with {:locale=>[:ru], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/alexey/RubymineProjects/blog_rails_home/app/views"
+):
+    1: <h3><%= I18n.t('.categories.index.title') %></h3>
+    2: 
+    3: <%= render @categories %>
+    4: 
+    5: <%= will_paginate @categories, renderer: BootstrapPaginationHelper::LinkRenderer %>
+  
+app/views/categories/index.html.erb:3:in `_app_views_categories_index_html_erb__3489196587366388394_70159188327180'
+Started GET "/ru/categories/new" for 127.0.0.1 at 2017-12-06 16:04:35 +0300
+Processing by CategoriesController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (1.7ms)
+  Rendered categories/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 59ms (Views: 51.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ru/categories" for 127.0.0.1 at 2017-12-06 16:13:41 +0300
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/0WYZvycIWe5h+G8d8eiMkk/C1TDGiq6kGwuEPMkePMwWHk//knYZECjdlwK4Q0C+YLVAQDoGsuJf8l3OCHGvg==", "category"=>{"name"=>"Ruby"}, "commit"=>"Создать категорию", "locale"=>"ru"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ruby"], ["created_at", "2017-12-06 13:13:41.938138"], ["updated_at", "2017-12-06 13:13:41.938138"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/categories?success=%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F+%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE+%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B0
+Completed 302 Found in 7ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/ru/categories?success=%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F+%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE+%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B0" for 127.0.0.1 at 2017-12-06 16:13:41 +0300
+Processing by CategoriesController#index as HTML
+  Parameters: {"success"=>"Категория успешно создана", "locale"=>"ru"}
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ru/categories?success=%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F+%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE+%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B0" for 127.0.0.1 at 2017-12-06 16:29:36 +0300
+Processing by CategoriesController#index as HTML
+  Parameters: {"success"=>"Категория успешно создана", "locale"=>"ru"}
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (257.8ms)
+Completed 500 Internal Server Error in 265ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `edit_categories_path' for #<#<Class:0x00007f9e701cce40>:0x00007f9e67443ba0>
+Did you mean?  edit_category_path):
+    19:           <td><%= index %></td>
+    20:           <td><%= category.name %></td>
+    21:           <td>
+    22:             <%= link_to 'Изменить', edit_categories_path, class: 'btn btn-outline-primary btn-sm' %>
+    23:           </td>
+    24:         </tr>
+    25:         <% end %>
+  
+app/views/categories/index.html.erb:22:in `block in _app_views_categories_index_html_erb__3489196587366388394_70159157055520'
+app/views/categories/index.html.erb:17:in `each_with_index'
+app/views/categories/index.html.erb:17:in `_app_views_categories_index_html_erb__3489196587366388394_70159157055520'
+Started GET "/ru/categories?success=%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F+%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE+%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B0" for 127.0.0.1 at 2017-12-06 16:30:05 +0300
+Processing by CategoriesController#index as HTML
+  Parameters: {"success"=>"Категория успешно создана", "locale"=>"ru"}
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ru/categories/1/edit" for 127.0.0.1 at 2017-12-06 16:30:11 +0300
+Processing by CategoriesController#edit as HTML
+  Parameters: {"locale"=>"ru", "id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (1.7ms)
+  Rendered categories/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 50ms (Views: 45.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/ru/categories/1" for 127.0.0.1 at 2017-12-06 16:30:16 +0300
+Processing by CategoriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ir9HXCQgbGK2NGbnc/ldtXciqrECnGmCdibp7ExbRxXZnNBrhvzP2Tyuqp4oq+CItE+1MCdP0ARCtbvhngPsrw==", "category"=>{"name"=>"Ruby1"}, "commit"=>"Изменить категорию", "locale"=>"ru", "id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "categories" SET "name" = $1, "updated_at" = $2 WHERE "categories"."id" = $3[0m  [["name", "Ruby1"], ["updated_at", "2017-12-06 13:30:16.077925"], ["id", 1]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/categories/1
+Completed 302 Found in 10ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/ru/categories/1" for 127.0.0.1 at 2017-12-06 16:30:16 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <article class="post">
+    2:   <section class="post-head">
+    3:     <h1><%= @post.title %></h1>
+    4:     <small>
+    5:       <time> <%= @post.created_at.to_date.strftime("%b %B, %Y") %> </time>
+    6:       |
+  
+app/views/categories/show.html.erb:3:in `_app_views_categories_show_html_erb__3868960998477804873_70159232002700'
+Started GET "/ru/categories?success=%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F+%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE+%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B0" for 127.0.0.1 at 2017-12-06 16:32:27 +0300
+Processing by CategoriesController#index as HTML
+  Parameters: {"success"=>"Категория успешно создана", "locale"=>"ru"}
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 56ms (Views: 52.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/ru/categories/2" for 127.0.0.1 at 2017-12-06 16:32:32 +0300
+Processing by CategoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"L7C2NNVgf3vbxcpoT7NKmQV/RVkw4B5Nh+41VZT+1ibgrVdt17WGeCLhXYgyleWptcKbDPMSLjye/dIyX/toaw==", "locale"=>"ru", "id"=>"2"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 2]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/categories
+Completed 302 Found in 10ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/ru/categories" for 127.0.0.1 at 2017-12-06 16:32:32 +0300
+Processing by CategoriesController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/ru/categories/1" for 127.0.0.1 at 2017-12-06 16:32:35 +0300
+Processing by CategoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rC4unNG/ioKtCFA3uscpEWa60Fav0o2YbiL65KE75zVjM8/F02pzgVQsx9fH4YYh1gcOA2wgvel3MR2Daj5ZeA==", "locale"=>"ru", "id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/categories
+Completed 302 Found in 5ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/ru/categories" for 127.0.0.1 at 2017-12-06 16:32:35 +0300
+Processing by CategoriesController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 51ms (Views: 48.7ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6166590493836834180)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCategoryIdToPost (20171206133408)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "posts" ADD "category_id" integer[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_category_id" ON "posts"  ("category_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171206133408"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6166590493836834180)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ru/categories/3/edit" for 127.0.0.1 at 2017-12-06 16:39:40 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#edit as HTML
+  Parameters: {"locale"=>"ru", "id"=>"3"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (1.7ms)
+  Rendered categories/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 54ms (Views: 44.4ms | ActiveRecord: 2.8ms)
+
+
+Started PATCH "/ru/categories/3" for 127.0.0.1 at 2017-12-06 16:39:46 +0300
+Processing by CategoriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RJ1HJnxaJnQRCEPqCNddLAqjnsCLSt9PcEXkmS5qHA0ldNXJbn+UBK38Tr+vTPTK7Nk2dfvaBy/GWDbMosMJ7A==", "category"=>{"name"=>"Ruby2"}, "commit"=>"Изменить категорию", "locale"=>"ru", "id"=>"3"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "categories" SET "name" = $1, "updated_at" = $2 WHERE "categories"."id" = $3[0m  [["name", "Ruby2"], ["updated_at", "2017-12-06 13:39:46.175920"], ["id", 3]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/categories/3
+Completed 302 Found in 11ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/ru/categories/3" for 127.0.0.1 at 2017-12-06 16:39:46 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"3"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <article class="post">
+    2:   <section class="post-head">
+    3:     <h1><%= @post.title %></h1>
+    4:     <small>
+    5:       <time> <%= @post.created_at.to_date.strftime("%b %B, %Y") %> </time>
+    6:       |
+  
+app/views/categories/show.html.erb:3:in `_app_views_categories_show_html_erb__3868960998477804873_70159226447380'
+Started GET "/ru/posts" for 127.0.0.1 at 2017-12-06 16:49:24 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 68ms (Views: 54.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/ru/posts/35/edit" for 127.0.0.1 at 2017-12-06 16:49:35 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"locale"=>"ru", "id"=>"35"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  Rendered posts/_form.html.erb (19.4ms)
+  Rendered posts/edit.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 68ms (Views: 59.4ms | ActiveRecord: 4.1ms)
+
+
+Started PATCH "/ru/posts/35" for 127.0.0.1 at 2017-12-06 16:49:43 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tPl5eAFTIGWv0kldGWhV/N4wI7G1u3HTeCX7tX5D8VJY+4TIiyvmSacZyaLSAaiCKRjBgAgqygKTzm4yv+gyQA==", "post"=>{"title"=>"22222", "summary"=>"2222222", "body"=>"<div>222222222222222222222</div>", "category_id"=>"3"}, "commit"=>"Изменить статью", "locale"=>"ru", "id"=>"35"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.9ms)[0m  [1m[33mUPDATE "posts" SET "category_id" = $1, "updated_at" = $2 WHERE "posts"."id" = $3[0m  [["category_id", 3], ["updated_at", "2017-12-06 13:49:43.341802"], ["id", 35]]
+  [1m[35m (10.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ru/posts/35
+Completed 302 Found in 29ms (ActiveRecord: 13.1ms)
+
+
+Started GET "/ru/posts/35" for 127.0.0.1 at 2017-12-06 16:49:43 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"35"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_disqus.html.erb (0.3ms)
+  Rendered posts/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 49ms (Views: 46.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2017-12-06 16:49:52 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.7ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 55ms (Views: 52.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ru/posts" for 127.0.0.1 at 2017-12-06 16:50:23 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.8ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 69ms (Views: 61.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-12-06 16:50:26 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (3.5ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 58ms (Views: 54.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-12-06 16:54:37 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (247.1ms)
+  Rendered posts/index.html.erb within layouts/application (250.8ms)
+Completed 500 Internal Server Error in 260ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `category' for #<#<Class:0x00007f9e67420a10>:0x00007f9e6af646d0>
+Did you mean?  category_url):
+    4:     <small>
+    5:       <time> <%= post.created_at.to_date.strftime("%d %B, %Y") %> </time>
+    6:       |
+    7:       <%= link_to I18n.t('.posts.post.edit'), category_path(category) %>
+    8:       |
+    9:       <%= link_to I18n.t('.posts.post.edit'), edit_post_path(post) %>
+   10:       |
+  
+app/views/posts/_post.html.erb:7:in `_app_views_posts__post_html_erb__792805463008410255_70159187994760'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb___1859425009998705554_70159188043880'
+Started GET "/ru/posts" for 127.0.0.1 at 2017-12-06 16:57:02 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (1.1ms)
+  Rendered posts/index.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/alexey/RubymineProjects/blog_rails_home/app/views/posts/_post.html.erb:6: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+=( if post.category.presrnt? );@output_buffer.safe_append='
+                              ^
+/Users/alexey/RubymineProjects/blog_rails_home/app/views/posts/_post.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;       end 
+                   ^
+/Users/alexey/RubymineProjects/blog_rails_home/app/views/posts/_post.html.erb:26: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/alexey/RubymineProjects/blog_rails_home/app/views/posts/_post.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/posts/_post.html.erb:6: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/posts/_post.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+app/views/posts/_post.html.erb:26: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/posts/_post.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb___1859425009998705554_70159160302360'
+Started GET "/ru/posts" for 127.0.0.1 at 2017-12-06 16:57:18 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (0.8ms)
+  Rendered posts/index.html.erb within layouts/application (24.4ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/alexey/RubymineProjects/blog_rails_home/app/views/posts/_post.html.erb:6: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+=( if post.category.present? );@output_buffer.safe_append='
+                              ^
+/Users/alexey/RubymineProjects/blog_rails_home/app/views/posts/_post.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;       end 
+                   ^
+/Users/alexey/RubymineProjects/blog_rails_home/app/views/posts/_post.html.erb:26: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/alexey/RubymineProjects/blog_rails_home/app/views/posts/_post.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/posts/_post.html.erb:6: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/posts/_post.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+app/views/posts/_post.html.erb:26: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/posts/_post.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb___1859425009998705554_70159243952180'
+Started GET "/ru/posts" for 127.0.0.1 at 2017-12-06 16:57:23 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (0.9ms)
+  Rendered posts/index.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/alexey/RubymineProjects/blog_rails_home/app/views/posts/_post.html.erb:6: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+=( if post.category.present? );@output_buffer.safe_append='
+                              ^
+/Users/alexey/RubymineProjects/blog_rails_home/app/views/posts/_post.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;       end 
+                   ^
+/Users/alexey/RubymineProjects/blog_rails_home/app/views/posts/_post.html.erb:26: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/alexey/RubymineProjects/blog_rails_home/app/views/posts/_post.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/posts/_post.html.erb:6: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/posts/_post.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+app/views/posts/_post.html.erb:26: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/posts/_post.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb___1859425009998705554_70159187289360'
+Started GET "/ru/posts" for 127.0.0.1 at 2017-12-06 16:57:48 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of posts/_post.html.erb [5 times] (6.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 66ms (Views: 62.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ru?page=2" for 127.0.0.1 at 2017-12-06 16:57:53 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2", "locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of posts/_post.html.erb [4 times] (13.9ms)
+  Rendered posts/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 65ms (Views: 58.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/ru/categories/3" for 127.0.0.1 at 2017-12-06 16:57:56 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"3"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <article class="post">
+    2:   <section class="post-head">
+    3:     <h1><%= @post.title %></h1>
+    4:     <small>
+    5:       <time> <%= @post.created_at.to_date.strftime("%b %B, %Y") %> </time>
+    6:       |
+  
+app/views/categories/show.html.erb:3:in `_app_views_categories_show_html_erb__3868960998477804873_70159238924900'
+Started GET "/ru?page=2" for 127.0.0.1 at 2017-12-06 16:58:33 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2", "locale"=>"ru"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of posts/_post.html.erb [4 times] (3.6ms)
+  Rendered posts/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 49ms (Views: 45.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ru/posts/35/edit" for 127.0.0.1 at 2017-12-06 16:58:38 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"locale"=>"ru", "id"=>"35"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  Rendered posts/_form.html.erb (4.5ms)
+  Rendered posts/edit.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 58ms (Views: 53.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ru/posts/35" for 127.0.0.1 at 2017-12-06 16:58:43 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"35"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_disqus.html.erb (0.4ms)
+  Rendered posts/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 61ms (Views: 56.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ru/posts/35" for 127.0.0.1 at 2017-12-06 16:59:19 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"35"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered posts/_disqus.html.erb (0.3ms)
+  Rendered posts/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 50ms (Views: 46.4ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6166590493836834180)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAncestryToCategories (20171206152236)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "categories" ADD "ancestry" character varying[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE  INDEX  "index_categories_on_ancestry" ON "categories"  ("ancestry")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171206152236"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6166590493836834180)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 
-
+gem 'ancestry'
 gem 'will_paginate', '~> 3.1.0'
 gem 'trix'
 gem 'mini_magick'

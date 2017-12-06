@@ -1,0 +1,20 @@
+<article class="post">
+  <section class="post-head">
+    <h1><%= @post.title %></h1>
+    <small>
+      <time> <%= @post.created_at.to_date.strftime("%b %B, %Y") %> </time>
+      |
+      <%= link_to I18n.t('.posts.show.edit'), edit_post_path(@post) %>
+      |
+      <%= link_to I18n.t('.posts.show.delete'), post_path(@post), method: :delete, data: {confirm: 'Вы уверены?'} %>
+
+    </small>
+  </section>
+
+  <section class="post-body">
+    <%= image_tag @post.image, class: 'img-show' if @post.image? %>
+    <%= @post.body.html_safe %>
+  </section>
+</article>
+
+<%= render 'disqus' %>

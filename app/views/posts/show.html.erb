@@ -3,6 +3,10 @@
     <h1><%= @post.title %></h1>
     <small>
       <time> <%= @post.created_at.to_date.strftime("%b %B, %Y") %> </time>
+      <% if @post.category.present? %>
+          |
+          <%= link_to @post.category.name, @post.category %>
+      <% end %>
       |
       <%= link_to I18n.t('.posts.show.edit'), edit_post_path(@post) %>
       |

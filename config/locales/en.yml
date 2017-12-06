@@ -7,6 +7,23 @@ en:
   common:
     errors: 'Errors'
     back: 'Back'
+  categories:
+    new:
+      title: 'New category'
+    form:
+      submit: '%{action} category'
+      create: 'Create'
+      edit: 'Edit'
+    index:
+      title: 'Articles'
+    edit:
+      title: 'Edit article'
+    show:
+      edit: 'Edit'
+      delete: 'Delete'
+    post:
+      edit: 'Edit'
+      delete: 'Delete'
   posts:
     new:
       title: 'New article'

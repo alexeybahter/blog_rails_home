@@ -7,6 +7,23 @@ ru:
   common:
     errors: 'При заполнение формы возникли ошибки'
     back: 'Назад'
+  categories:
+    new:
+     title: 'Новая категория'
+    form:
+      submit: '%{action} категорию'
+      create: 'Создать'
+      edit: 'Изменить'
+    index:
+      title: 'Категории'
+    edit:
+      title: 'Редактирование категории'
+    show:
+      edit: 'Изменить'
+      delete: 'Удалить категорию'
+    post:
+      edit: 'Изменить'
+      delete: 'Удалить категорию'
   posts:
     new:
       title: 'Новая статья'

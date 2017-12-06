@@ -18,7 +18,8 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to @post, success: 'Статья успешно создана'
     else
-      render :new, danger: 'Статья не создана'
+      flash.now[:danger] =  'Статья не создана'
+      render :new
     end
   end
 
@@ -29,13 +30,14 @@ class PostsController < ApplicationController
     if @post.update_attributes(post_params)
       redirect_to @post, success: 'Статья успешно обновлена'
     else
-      render :edit, danger: 'Статья не обновлена'
+      flash.now[:danger] = 'Статья не обновлена'
+      render :edit
     end
   end
 
   def destroy
     @post.destroy
-    redirect_to posts_path, success: 'Статья цспешно удалена'
+    redirect_to posts_path, success: 'Статья успешно удалена'
   end
 
   private
@@ -45,7 +47,7 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :summary, :body, :image)
+    params.require(:post).permit(:title, :summary, :body, :category_id, :image)
   end
 
 end

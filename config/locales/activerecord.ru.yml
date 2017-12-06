@@ -7,6 +7,8 @@ ru:
         title: 'Название'
         summary: 'Краткое описание'
         body: 'Содержание'
+      category:
+        name: 'Название'
     errors:
       messages:
         blank: 'не может быть пустым'

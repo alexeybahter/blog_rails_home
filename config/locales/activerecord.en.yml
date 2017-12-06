@@ -7,6 +7,8 @@ en:
           title: 'Title'
           summary: 'Summary'
           body: 'Content'
+        category:
+          name: 'Name'
       errors:
         messages:
           blank: "can't be blank"
